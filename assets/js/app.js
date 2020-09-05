@@ -1,28 +1,12 @@
 // Sample data
 const data = [
   {
-    name: "John Doe",
-    age: 32,
-    gender: "male",
-    lookingfor: "female",
-    location: "Boston MA",
-    image: "https://thispersondoesnotexist.com/image",
-  },
-  {
-    name: "Jen Smith",
-    age: 26,
-    gender: "female",
-    lookingfor: "male",
-    location: "Miami FL",
-    image: "https://thispersondoesnotexist.com/image",
-  },
-  {
-    name: "William Johnson",
-    age: 38,
-    gender: "male",
-    lookingfor: "female",
-    location: "Lynn MA",
-    image: "https://thispersondoesnotexist.com/image",
+    name: faker.name.findName(),
+    age: Math.ceil(Math.random() * 30 + 15),
+    gender: faker.name.gender(),
+    lookingfor: faker.name.gender(),
+    image: faker.image.people(),
+    phone: faker.phone.phoneNumber(),
   },
 ];
 
@@ -42,7 +26,7 @@ function nextProfile() {
     
               <div class="row">
                 <div class="col s12">
-                  <div class="card-image circle">
+                  <div class="card-image">
                     <img
                       class="responsive-img circle"
                       src="${currentProfile.image}"
@@ -55,6 +39,7 @@ function nextProfile() {
                     <li class="collection-item center-align">Name : ${currentProfile.name}</li>
                     <li class="collection-item center-align">Age : ${currentProfile.age}</li>
                     <li class="collection-item center-align">Gender : ${currentProfile.gender}</li>
+                    <li class="collection-item center-align">Phone : ${currentProfile.phone}</li>
                     <li class="collection-item center-align">Interested in : ${currentProfile.lookingfor}</li>
                   </ul>
                 </div>
@@ -73,7 +58,7 @@ function profileIterator(profiles) {
   return {
     next: function () {
       return nextIndex < profiles.length
-        ? { value: profiles[nextIndex+=1], done: false }
+        ? { value: profiles[(nextIndex += 1)], done: false }
         : { done: true };
     },
   };
