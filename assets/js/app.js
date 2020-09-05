@@ -32,14 +32,14 @@ const profiles = profileIterator(data);
 nextProfile();
 
 // Next Event
-document.getElementById("next").addEventListener("click", nextProfile);
+document.querySelector("#nextBtn").addEventListener("click", nextProfile);
 
 // Next Profile Display
 function nextProfile() {
   const currentProfile = profiles.next().value;
   if (currentProfile !== undefined) {
     document.querySelector(".profileDisplay").innerHTML = `
-    <div class="card-content">
+    
               <div class="row">
                 <div class="col s12">
                   <div class="card-image circle">
@@ -58,21 +58,8 @@ function nextProfile() {
                     <li class="collection-item center-align">Interested in : ${currentProfile.lookingfor}</li>
                   </ul>
                 </div>
-                <div class="row">
-                  <div class="col s12 center-align">
-                    <button
-                      class="btn waves-effect waves-light"
-                      type="submit"
-                      name="action"
-                      id="next"
-                    >
-                      Next
-                      <i class="material-icons right">send</i>
-                    </button>
-                  </div>
-                </div>
+                
               </div>
-            </div>
     `;
   } else {
     // No more profiles
@@ -82,10 +69,10 @@ function nextProfile() {
 
 // Profile Iterator
 function profileIterator(profiles) {
-  let nextIndex = 0;
+  let nextIndex = -1;
   return {
     next: function () {
-      return nextIndex <= profiles.length
+      return nextIndex < profiles.length
         ? { value: profiles[nextIndex+=1], done: false }
         : { done: true };
     },
