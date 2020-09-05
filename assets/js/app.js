@@ -28,7 +28,7 @@ function nextProfile() {
                 <div class="col s12">
                   <div class="card-image">
                     <img
-                      class="responsive-img circle"
+                      class="responsive-img"
                       src="${currentProfile.image}"
                       alt=""
                     />
