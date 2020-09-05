@@ -1,0 +1,23 @@
+.card {
+  width: 95%;
+  margin: auto;
+  .card-title {
+    h3 {
+      padding-top: 0.3em;
+      text-transform: uppercase;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      font-weight: 900;
+    }
+  }
+  .card-content {
+    padding: 10px 10px 0 10px;
+    .collection {
+      margin-top: 3em;
+    }
+    #next {
+      margin: 1em 0 0 0;
+      background-color: cornflowerblue;
+      font-weight: 900;
+    }
+  }
+}
