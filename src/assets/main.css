@@ -20,9 +20,13 @@
   text-transform: uppercase;
   font-weight: 600;
 }
+.card .card-content .collection .collection-item #userName {
+  text-transform: none;
+}
 .card .card-content #nextBtn {
   background-color: #e91f62;
   font-weight: 900;
 }
-
-/*# sourceMappingURL=main.css.map */
+.card .card-content #nextBtn:hover {
+  background-color: red;
+}
