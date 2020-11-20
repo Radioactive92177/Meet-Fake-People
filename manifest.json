@@ -1,0 +1,25 @@
+{
+  "short_name": "Meet Fake People",
+  "name": "Meet Fake People",
+  "icons": [
+    {
+      "src": "team.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "team.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "team.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#e91f62"
+}
