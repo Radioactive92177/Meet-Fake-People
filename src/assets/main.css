@@ -1,0 +1,26 @@
+.card {
+  width: 95%;
+  margin: auto;
+  background: #f3f3f3;
+}
+.card .card-title h3 {
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+  text-transform: uppercase;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 900;
+}
+.card .card-content {
+  padding: 0.5em;
+}
+.card .card-content .collection {
+  margin-top: 3em;
+}
+.card .card-content .collection .collection-item {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.card .card-content #nextBtn {
+  background-color: #e91f62;
+  font-weight: 900;
+}
